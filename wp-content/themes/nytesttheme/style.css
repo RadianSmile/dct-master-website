@@ -1,0 +1,583 @@
+/*
+Theme Name: DCT Test Theme
+Theme URI: http://newyellow.idv.tw
+Description: A Theme Designed for DCT
+Author: Newyellow for now
+Author URI: http://newyellow.idv.tw
+Version: 1.0
+Tags: white, two-columns
+License: GNU General Public License v2 or later License URI: http://www.gnu.org/licenses/gpl-2.0.html
+*/
+
+body{
+	padding: 0px;
+	margin: 0px;
+	height: 100%;
+	
+	background: #333;
+	color: rgba( 255, 255, 255, 0.9);
+}
+
+h1, h2, h3, h4 {
+	color: #fff;
+}
+
+/* index */
+
+div.index-header-pic {
+	margin: 20px 6% -40px 6%;
+	z-index: 10000;
+	
+	width: 840px;
+	height: 223px;
+	background-size: contain;
+	background-position: left center;
+	background-repeat: no-repeat;
+}
+
+div.index-header-bg {
+	position: absolute;
+	top: 60px;
+	height: 120px;
+	width: 100%;
+	z-index: -100;
+	
+	background-size: cover;
+	background-position: center center;
+}
+
+div#index-news-block, div#index-project-block {
+	width: 80%;
+	overflow: hidden;
+}
+a.index-news-post, a.index-project-post {
+	padding: 5px 5px 5px 15px;
+	margin: 0px;
+	display: block;
+	
+	border-left: 5px solid transparent;
+	transition: background-color .25s ease-in-out;
+	-moz-transition: background-color .25s ease-in-out;
+	-webkit-transition: background-color .25s ease-in-out;
+}
+
+a.index-news-post:hover, a.index-project-post:hover {
+	border-color: rgba(0,153,204,1);
+	background-color: rgba(0,153,204,0.2)
+}
+
+
+/* deafault link style */
+a {
+	transition: color .25s ease-in-out;
+	-moz-transition: color .25s ease-in-out;
+	-webkit-transition: color .25s ease-in-out;
+}
+a:link {
+	text-decoration: none;
+	color: #0CC;
+}
+
+a:visited {
+	text-decoration: none;
+	color: #0CC;
+}
+
+a:hover {
+	text-decoration: underline;
+	color: #D6F7FB;
+}
+
+div.container {
+	position: relative;
+	
+	width: 100%;
+	height: 100vh;
+	
+	padding: 0px;
+	margin: 0px;
+}
+
+/* navigations */
+
+nav {
+	list-style: none;
+	padding: 0px;
+	margin: 0px;
+	
+	background-color: #222;
+	height: 100%;
+	width: 60px;
+	
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	
+	display: inline-block;
+	z-index:100;
+}
+
+nav div{
+	width: 100%;
+	height: 100%;
+	position: relative;
+	top: 20px;
+	padding: 0px;
+	margin: 0px;
+}
+
+nav div ul {
+	padding: 0px;
+	margin: 0px;
+	
+	list-style: none;
+}
+
+nav li {
+	position: relative;
+	
+	transition: border .25s ease-in-out;
+	-moz-transition: border .25s ease-in-out;
+	-webkit-transition: border .25s ease-in-out;
+}
+
+nav li:hover {
+	border-right: 6px solid #09C;
+}
+
+nav li a{
+	text-decoration: none;
+	display: block;
+	width: 50px;
+	height: 50px;
+	padding: 5px;
+
+	text-align: center;
+	font-size: 16px;
+	letter-spacing: 3px;
+	line-height: 1.2;
+	
+	transition: color .25s ease-in-out;
+	-moz-transition: color .25s ease-in-out;
+	-webkit-transition: color .25s ease-in-out;
+}
+
+nav li a:visited {
+	text-decoration: none;
+	color: #999;
+}
+
+nav li a:link {
+	text-decoration: none;
+	color: #999;
+}
+
+nav li a:hover {
+	color:#FFF;
+}
+
+nav li ul.sub-menu {
+	position: absolute;
+	top: 0px;
+	left: 60px;
+	
+	width: 0px;
+	
+	list-style: none;
+	background-color: #09C;
+	
+	overflow: hidden;
+	
+	transition: width .25s ease-in-out;
+	-moz-transition: width .25s ease-in-out;
+	-webkit-transition: width .25s ease-in-out;
+}
+
+nav li:hover ul.sub-menu {
+	width: 60px;
+}
+
+nav ul.sub-menu li {
+	transition: none;
+	-moz-transition: none;
+	-webkit-transition: none;
+}
+
+nav ul.sub-menu a:link {
+	color: #069;
+}
+
+nav ul.sub-menu a:visited {
+	color: #069;
+}
+
+nav ul.sub-menu a:hover {
+	color: #FFF;
+}
+
+
+/*
+	Bigphoto Styling
+	
+	two columns, left photo, right content
+*/
+div#bigphoto-image-wrapper {
+	width: 50%;
+	height: 100%;
+	
+	position: fixed;
+	overflow: hidden;
+}
+
+div#bigphoto-image {
+	margin: 0px 0px 0px 60px;
+	height: 100%;
+	padding: 0px;
+	
+	
+	
+	background-image: none;
+	background-color: #000;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center center;
+	
+	transition: background .5s ease-in-out;
+	-moz-transition: background .5s ease-in-out;
+	-webkit-transition: background .5s ease-in-out;
+}
+
+div#bigphoto-content {
+	letter-spacing: 1px;
+	line-height: 1.3;
+
+	width: 50%;
+	margin: 0px 0px 0px 50%;
+	
+	overflow: auto;
+	padding-top: 80px;
+}
+
+div#bigphoto-content article.main {
+	margin: 5% 10%;
+	display: block;
+}
+
+h1 {
+	font-size: 40px;
+}
+
+h1.page-title {
+	text-align: left;
+	margin: 0% 10%;
+	text-indent: 1em;
+}
+
+div.page-title-line {
+	width: 60%;
+	height: 1px;
+	background-color:#FF0;
+	margin:20px 40% 20px 0px;
+}
+
+h2 {
+	font-size: 24px;
+}
+
+/*	Simple Page Styling */
+
+div#simple-content {
+	margin-left: 60px;
+	padding: 0px;
+}
+
+div#simple-content article.main {
+	margin: 50px 100px;
+}
+
+
+
+/* Main Page */
+
+a.slider-item {
+	width: 100%;
+	height: 100%;
+	
+	display: block;
+	
+	background-position: center;
+	background-size: cover; 
+	
+}
+
+a.slider-item div.caption {
+	position: absolute;
+	
+	left: 0px;
+	top: 200px;
+	
+	padding: 20px;
+	font-size: 16px;
+	width: 800px;
+	height: 100px;
+	
+	background-color: transparent;
+	color: transparent;
+	
+	transition: background-color color .5s ease-in-out;
+	-moz-transition: background-color color .5s ease-in-out;
+	-webkit-transition: background-color color .5s ease-in-out;
+}
+
+a.slider-item:hover div.caption {
+	position: absolute;
+	
+	left: 0px;
+	top: 200px;
+	
+	padding: 20px;
+	font-size: 16px;
+	width: 800px;
+	height: 100px;
+	
+	background-color: rgba(0,102,153,0.6);
+	color: #fff;
+}
+
+
+div#main-container {
+	margin: 0px 0px 0px 60px;
+}
+
+/* Profile Page */
+
+h1.author-title-name {
+	text-indent: 0em;
+	margin-left: 10%;
+	margin-bottom: 0px;
+}
+
+h2.author-person-title {
+	text-indent: 1em;
+	margin-left: 10%;
+	margin-top: 10px;
+}
+
+h2.author-motto {
+	margin: 10%;
+	text-align: center;
+	font-size: 32px;
+}
+
+h1.author-title-name {
+}
+
+div.author-email {
+	margin: 20px 10% 10% 13%;
+}
+
+div#author-projects-in {
+	margin: 30px 10%;
+}
+
+div#author-projects-in h2 {
+	margin: 10px;
+}
+
+div#author-projects-in a {
+	display: block;
+	margin: 5px 30px;
+	padding: 0px;
+}
+
+/* students */
+
+div.term-spliter-text {
+	width: 60%;
+	padding: 0px 40% 0px 0px;
+	margin-top: 30px;
+	margin-bottom: 10px;
+	font-size: 18px;
+	color: #fff;
+}
+
+div.term-spliter-line {
+	width: 60%;
+	height: 1px;
+	padding: 0px;
+	margin: 10px 40% 10px 0px;
+	
+	background-color: #09C;
+}
+
+div.term-container {
+	padding: 20px;
+	overflow: hidden;
+}
+
+div.students-thumbnail {
+	position: relative;
+	height: 200px;
+	width: 200px;
+	background-size: cover;
+	
+	margin: 15px;
+	float: left;
+}
+
+div.students-thumbnail a {
+	width: 100%;
+	height: 100%;
+	display: block;
+	background-color: #069;
+	
+	transition: opacity .25s ease-in-out;
+	-moz-transition: opacity .25s ease-in-out;
+	-webkit-transition: opacity .25s ease-in-out;
+}
+
+div.students-thumbnail a:link {
+	opacity: 0;
+	color: #FFF;
+	text-decoration: none;
+}
+
+div.students-thumbnail a:visited {
+	opacity: 0;
+	color: #FFF;
+	text-decoration: none;
+}
+
+div.students-thumbnail a:hover {
+	opacity: 0.7;
+	color: #FFF;
+	text-decoration: none;
+}
+
+div.students-thumbnail a div.user-info {
+	float: right;
+	display: block;
+	
+	text-align: right;
+	word-spacing: 2px;
+	line-height: 1.5;
+	
+	width: 85%;
+	padding: 5px;
+	margin-top: 20%;
+	background-color:#099;
+}
+
+
+/* projects */
+
+a.project-member-thumbnail {
+	display: inline-block;
+	color: #FFF;
+	
+	min-width: 150px;
+	height: 50px;
+	
+	min-width: 150px;
+	
+	line-height: 50px;
+	background-color: rgba(0,153,204, 0.3);
+	
+	transition: background-color .25s ease-in-out;
+	-moz-transition: background-color .25s ease-in-out;
+	-webkit-transition: background-color .25s ease-in-out;
+	
+	margin: 10px 0px;
+}
+
+a.project-member-thumbnail:hover {
+	background-color: #09C;
+}
+
+a.project-member-thumbnail img {
+	width: 40px;
+	height: 40px;
+	border: none;
+	
+	margin: 5px;
+	vertical-align: middle;
+}
+
+a.project-member-thumbnail span.display-name {
+	padding: 5px 10px;
+	text-align: center;
+	vertical-align: middle;
+	
+	margin: 0px 10px;
+}
+
+div.project_box {
+	position: relative;
+	
+	width: 600px;
+	height: 150px;
+	background-position: center;
+	background-size: cover;
+	
+	margin: 20px;
+	overflow: hidden;
+}
+
+div.project_box h3 {
+	position: absolute;
+	
+	width: 200px;
+	
+	top: 0px;
+	left: 0px;
+	
+	padding: 10px 10px 10px 30px;
+	
+	background-color: rgba(0,153,153,0.7);
+}
+
+div.project_box a {
+	width: 100%;
+	height: 100%;
+	
+	display: block;
+	
+	border: none;
+	background-color: rgba(0,153,204,0);
+	
+	transition: background-color .25s ease-in-out;
+	-moz-transition: background-color .25s ease-in-out;
+	-webkit-transition: background-color .25s ease-in-out;
+}
+
+div.project_box a:hover {
+	background-color: rgba(0,153,204,0.3);
+}
+
+
+/* for paticular teachers page */
+
+div.professor-title {
+	font-size: 14px;
+	color: #BBB;
+	margin: 5px;
+}
+div.professor-school {
+	font-size: 14px;
+	margin: 10px 5px 5px 5px;
+	color: #BBB;
+}
+.table_professors {
+	width: 90%;
+}
+.table_professors tr td {
+	border-bottom: 5px solid;
+	border-color: transparent;
+	padding: 25px 20px 0px 0px;
+	transition: border-color .5s ease-in-out;
+	-moz-transition: border-color .5s ease-in-out;
+	-webkit-transition: border-color .5s ease-in-out;
+}
+.table_professors tr:hover td {
+	border-color: #09C;
+}

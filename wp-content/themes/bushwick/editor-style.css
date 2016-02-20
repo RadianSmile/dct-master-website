@@ -1,0 +1,262 @@
+html {
+	font-size: x-large;
+}
+
+body {
+	line-height: 1.5;
+	text-rendering: optimizeLegibility;
+	vertical-align: baseline;
+	-webkit-hyphens: auto;
+	-moz-hyphens:    auto;
+	-ms-hyphens:     auto;
+	hyphens:         auto;
+	max-width: 640px;
+	-ms-word-wrap: break-word;
+	word-wrap:     break-word;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+nav,
+section {
+	display: block;
+}
+ol, ul {
+	list-style: none;
+}
+li li {
+	margin-left: 1.5em;
+}
+table { /* tables still need 'cellspacing="0"' in the markup */
+	border: 0;
+	border-collapse: separate;
+	border-spacing: 2px;
+}
+caption, th, td {
+	font-size: inherit;
+	font-weight: normal;
+	text-align: left;
+}
+td {
+	background: rgba(51, 71, 61, 0.05);
+	padding: 0.5em;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: "";
+}
+blockquote,
+q {
+	quotes: "" "";
+	-webkit-hyphens: none;
+	-moz-hyphens:    none;
+	-ms-hyphens:     none;
+	hyphens:         none;
+}
+a:focus {
+	outline: thin dotted;
+}
+a:hover,
+a:active { /* Improves readability when focused and also mouse hovered in all browsers people.opera.com/patrickl/experiments/keyboard/test */
+	outline: 0;
+}
+a > img {
+	border: 0;
+	vertical-align: middle;
+}
+
+
+/* =Global
+----------------------------------------------- */
+
+body,
+button,
+input,
+select,
+textarea {
+	color: #33473d;
+	font-family: "Lato","proxima-nova","Helvetica Neue Light","Helvetica Neue","Helvetica","Arial",sans-serif;
+}
+
+/* Headings */
+body h1,
+body h2,
+body h3,
+body h4,
+body h5,
+body h6 {
+	color: #774553;
+	clear: both;
+	font: 700 2.2rem/1.5 "Aleo","Skolar","ff-tisa-web-pro","Georgia",serif;
+}
+body h1 {
+	font-size: 2.75rem;
+	line-height: 1;
+	margin-bottom: 0.5em;
+}
+body h2 {
+	font-size: 1.5rem;
+	line-height: 1.333333333333333;
+	margin-bottom: 0.6666666666666667em;
+}
+body h3 {
+	font-size: 1rem;
+	line-height: 1;
+	margin-bottom: 1em;
+}
+body h4 {
+	font-size: 0.875rem;
+	line-height: 1.142857142857;
+	margin-bottom: 1.142857142857em;
+}
+body h5 {
+	font-size: 0.75rem;
+	line-height: 1.333333333333333;
+	margin-bottom: 1.333333333333333em;
+}
+body h6 {
+	font-size: 0.6666666666666667rem;
+	line-height: 1.333333333333333;
+	margin-bottom: 1.333333333333333em;
+}
+hr {
+	background-color: #ccc;
+	border: 0;
+	height: 1px;
+	margin-bottom: 1.5em;
+}
+
+/* Text elements */
+p {
+	margin-bottom: 1.5em;
+}
+ul, ol {
+	list-style-type: none;
+	margin: 0 0 1.5em 3em;
+}
+li > ul,
+li > ol {
+	margin-bottom: 0;
+	margin-left: 1.5em;
+}
+ul {
+	list-style: disc;
+}
+ol {
+	list-style: lower-roman;
+}
+dt {
+	font-weight: bold;
+}
+dd {
+	margin: 0 1.5em 1.5em;
+}
+b, strong {
+	font-weight: bold;
+}
+address, dfn, cite, em, i {
+	font-style: italic;
+}
+blockquote {
+	border-left: 5px solid #c38596;
+	color: rgba(51, 71, 61, 0.5);
+	font-family: "Aleo","Skolar","ff-tisa-web-pro","Georgia",serif;
+	font-style: italic;
+	padding-left: 1.5em;
+}
+blockquote cite {
+	color: #33473d;
+	font-family: "Lato", "proxima-nova", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+	font-style: normal;
+	font-size: 0.75em;
+}
+
+blockquote cite:before {
+	content: "\2014 \0020";
+}
+address {
+	margin: 0 0 1.5em;
+}
+pre {
+	background: #eee;
+	font-family: "Courier 10 Pitch", Courier, monospace;
+	font-size: 0.6875rem;
+	-webkit-hyphens: none;
+	-moz-hyphens:    none;
+	-ms-hyphens:     none;
+	hyphens:         none;
+	line-height: 1;
+	margin-bottom: 1.6em;
+	padding: 1.6em;
+	overflow: auto;
+	max-width: 100%;
+}
+code, kbd, tt, var {
+	font: 15px Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+	-webkit-hyphens: none;
+	-moz-hyphens:    none;
+	-ms-hyphens:     none;
+	hyphens:         none;
+}
+abbr, acronym {
+	border-bottom: 1px dotted #666;
+	cursor: help;
+}
+mark, ins {
+	background: #fff9c0;
+	border: none;
+	color: inherit;
+	text-decoration: none;
+}
+sup,
+sub {
+	font-size: 75%;
+	height: 0;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+sup {
+	bottom: 1ex;
+}
+sub {
+	top: .5ex;
+}
+small {
+	font-size: 75%;
+}
+big {
+	font-size: 125%;
+}
+figure {
+	margin: 0;
+}
+table {
+	margin: 0 0 1.5em;
+	width: 100%;
+}
+th {
+	font-weight: bold;
+}
+img {
+	height: auto; /* Make sure images are scaled correctly. */
+	max-width: 100%; /* Adhere to container width. */
+}
+
+a {
+	color: #68adc3;
+	font-weight: 700;
+	text-decoration: none;
+}
+a:hover,
+a:focus,
+a:active {
+	text-decoration: underline;
+}

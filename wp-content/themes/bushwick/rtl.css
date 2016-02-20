@@ -1,0 +1,119 @@
+/*
+Theme Name: Bushwick
+
+Adding support for language written in a Right To Left (RTL) direction is easy -
+it's just a matter of overwriting all the horizontal positioning attributes
+of your CSS stylesheet in a separate stylesheet file named rtl.css.
+
+http://codex.wordpress.org/Right_to_Left_Language_Support
+
+*/
+
+
+body {
+	direction: rtl;
+	unicode-bidi: embed;
+}
+
+li li {
+	margin-left: auto;
+	margin-right: 1.5em;
+}
+
+caption, th, td {
+	text-align: right;
+}
+ul, ol {
+	margin: 0 3em 1.5em 0;
+}
+li > ul,
+li > ol {
+	margin-left: auto;
+	margin-right: 1.5em;
+}
+
+blockquote {
+	border-left: 0;
+	border-right: 5px solid #c38596;
+	padding-left: auto;
+	padding-right: 1.5em;
+}
+
+.screen-reader-text:hover,
+.screen-reader-text:active,
+.screen-reader-text:focus {
+	left: auto;
+	right: 5px;
+}
+
+.site-branding,
+.single .entry-header {
+	left: auto;
+	right: 5%;
+}
+.navigation-main .menu,
+.navigation-main .nav-menu,
+.navigation-main ul ul,
+.gallery-item,
+.nav-previous {
+	float: right;
+}
+
+.navigation-main li {
+	margin-left: 1.5em;
+	margin-right: auto;
+}
+
+.navigation-main ul ul ul {
+	left: auto;
+	right: 100%;
+}
+
+.menu-toggle,
+.navigation-main .widget-handle,
+.entry-permalink,
+.comment-author .avatar {
+	float: left;
+}
+
+.entry-summary p:first-of-type:before {
+	content: none;
+}
+
+.entry-summary p:first-of-type {
+	margin-left: auto;
+}
+
+.nav-next {
+	text-align: right;
+}
+
+.site-header [class*="navigation"] {
+	float: left;
+	text-align: left;
+}
+
+.comment .reply {
+	left: 0;
+	right: auto;
+}
+
+.widget_calendar #prev {
+	text-align: right;
+}
+
+.widget_calendar #next {
+	text-align: left;
+}
+
+@media (min-width: 1024px) {
+	.site-header {
+		float: right;
+	}
+
+	.widget-area,
+	.content-area,
+	.site-footer {
+		float: left;
+	}
+}
