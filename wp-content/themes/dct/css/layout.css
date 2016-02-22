@@ -19,9 +19,10 @@ div.divTitle > span{font-size: 1.4rem; color:#999;}
 ul.yellow, ul.green, ul.red, ul.none{ list-style-position: outside; list-style: none; margin-left: 20px; padding-left: 0px;}
 ul a{ color:inherit;}
 ul a:hover{ color:black ;}
-ul.yellow li::before{  content: "．"; color:#FFC000; font-weight: bold; margin-left: -20px;}
-ul.green li::before{ content: "．"; color:#8CC63F; font-weight: bold;  margin-left: -20px;}
-ul.red li::before{ content: "．"; color:#F15A24; font-weight: bold;  margin-left: -20px;}
+ul.yellow li::before,ul.green li::before,ul.red li::before{ content: "・"; font-weight: bold; margin-left: -20px; width:20px; display: inline-block ;}
+ul.yellow li::before{ color:#FFC000; }
+ul.green li::before{ color:#8CC63F; }
+ul.red li::before{ color:#F15A24; }
 ul.none{ margin: 0px;}
 dt{ color:black;}
 dd{ margin-bottom: 1rem;}
