@@ -17,9 +17,10 @@ div.divTitle{ font-size: 3rem; color:#3D3D3D;}
 div.divTitle > span{font-size: 1.4rem; color:#999;}
 .blockTitle .more { font-size: 1.5rem; color:#ffc000;}
 ul.yellow, ul.green, ul.red, ul.none{ list-style-position: outside; list-style: none; margin-left: 20px; padding-left: 0px;}
+ul.yellow li, ul.green li, ul.red li{margin-bottom: 10px;}
 ul a{ color:inherit;}
 ul a:hover{ color:black ;}
-ul.yellow li::before,ul.green li::before,ul.red li::before{ content: "・"; font-weight: bold; margin-left: -20px; width:20px; display: inline-block ;}
+ul.yellow li::before,ul.green li::before,ul.red li::before{ content: "・"; font-weight: bold; margin-left: -20px; width:20px; display: inline-block ; }
 ul.yellow li::before{ color:#FFC000; }
 ul.green li::before{ color:#8CC63F; }
 ul.red li::before{ color:#F15A24; }
