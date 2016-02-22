@@ -45,7 +45,7 @@
 
 	$news_posts = get_posts( $news_args );
 	$project_posts = get_posts( $projects_args );
-  $award_news_posts = get_posts( $award_news_args) ;
+  // $award_news_posts = get_posts( $award_news_args) ;
 
 ?>
 <!-- /mainView -->
@@ -68,7 +68,7 @@
 
 				</ul>
 			</div>
-			<div class="col-md-4">
+			<!-- <div class="col-md-4">
 				<div class="row">
 					<div class="col-sm-12">
 						<h3 class="blockTitle xl">
@@ -95,16 +95,16 @@
 						</h3>
 						<ul class="yellow">
               <?php
-                foreach( $award_news_args as $index => $data ):
-                  echo '<li><a href="'.get_permalink( $data->ID ).'">';
-                  echo $data->post_title;
-                  echo '</a>';
-                endforeach;
+                // foreach( $award_news_args as $index => $data ):
+                //   echo '<li><a href="'.get_permalink( $data->ID ).'">';
+                //   echo $data->post_title;
+                //   echo '</a>';
+                // endforeach;
               ?>
 						</ul>
 					</div>
 				</div>
-			</div>
+			</div> -->
 		</div>
 	</div>
 	<hr class="none">
