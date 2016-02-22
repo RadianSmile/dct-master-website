@@ -43,7 +43,13 @@
     </head>
     <body id="">
         <div class="wrap">
-            <nav class="navbar navbar-inverse navbar-fixed-top ">
+            <nav class="navbar navbar-inverse navbar-fixed-top "
+              <?php
+              if (is_admin_bar_showing()){
+                echo "style='top:32px;'" ;
+              }
+              ?>
+            >
                 <div class="container-fluid">
                     <!-- Brand and toggle get grouped for better mobile display -->
                     <div class="navbar-header">
