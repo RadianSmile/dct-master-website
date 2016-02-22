@@ -24,6 +24,7 @@
       <div class="divTitle">
         修業規定
       </div>
+      <hr class="none">
     </div>
     <div class="col-sm-6">
       <div style="padding: 1rem 2rem;">
@@ -45,8 +46,8 @@
         <p></p>
         <p>學生應有基礎之程式設計經驗，入學後可用大學時期所修習之相關課程進行抵免審查，如未獲得抵免，需至大學部補修課程(99學年起入學適用)</p>
       </div>
-      
-      
+
+
     </div>
     <div class="col-sm-6">
       <div style="padding: 1rem 2rem;">
@@ -65,7 +66,7 @@
         </ul>
       </div>
     </div>
-    
+
   </div>
 </div>
 <!-- /LEADER -->

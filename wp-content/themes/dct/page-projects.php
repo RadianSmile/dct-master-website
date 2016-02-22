@@ -7,7 +7,7 @@
         <div class="pos">
           <h1>PROJECTS</h1>
           <p>數位專案</p>
-          
+
         </div>
       </div>
     </div>
@@ -22,10 +22,10 @@
 	<?php // search not complete yet
   	/*
   <div class="row">
-  	
+
     <div class="col-sm-12">
-    	
-    	
+
+
       <p class="properties">Search //
         <!-- 以下span為「當前的關鍵字」所使用 -->
         <span>UX, UI, C# <button type="button" class="btn btn-default btn-link ">清除 </button> </span>
@@ -38,22 +38,20 @@
           <input type="text" class="form-control" id="exampleInputEmail3" placeholder="搜尋">
         </div>
         <button type="submit" class="btn btn-primary"> <span class="glyphicon glyphicon-search"></span></button>
-     
+
     </div>
-    
+
   </div>
   */ ?>
-  
-  
+
+
 </div>
 <!-- /Capacity -->
 </div>
-<hr>
+
 <div class="container">
 <div class="row">
   <div class="col-sm-12">
-    
-    <hr class="none">
     <div class="divTitle">
       PROJECTS
     </div>
@@ -61,7 +59,7 @@
   </div>
   <!-- /title -->
   <div>
-    
+
 <?php
 
 	if( !isset($_GET['pjPage']) )
@@ -87,21 +85,21 @@
 	// 10: personnal projects
 	//$categories = get_categories();
 	//print_r( $categories );
-	
+
 	$projects_args = array(
 		'posts_per_page' => $pPerPage,
 		'category' => '3,10',
 		'post_type' => 'post',
 		'offset' => $pOffset
 	);
-	
+
 	$project_posts = get_posts( $projects_args );
-	
+
 ?>
-<h3 style="border-bottom: 2px solid #CCC; padding: 10px; width: 300px">最新專案</h3>
+<!-- <h3 style="border-bottom: 2px solid #CCC; padding: 10px; width: 300px">最新專案</h3> -->
 <?php
 	foreach( $project_posts as $index => $data ):
-		
+
 		$thumbnail_id = get_post_meta( $data->ID, '_thumbnail_id', true );
 		$imageUrl = wp_get_attachment_url( $thumbnail_id );
 ?>
@@ -117,7 +115,7 @@
 <?php
 	endforeach;
 ?>
-    
+
   </div>
   <!-- /projects -->
   <div class="text-center">
