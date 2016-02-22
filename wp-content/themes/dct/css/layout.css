@@ -105,7 +105,7 @@ dd{ margin-bottom: 1rem;}
 /* TEACHER DETAIL
 ===================================================================*/
 #table_professors tr{
-	border-bottom: gray 1px solid ;
+	border-bottom: 1px solid #eee;
 }
 #table_professors td {
 	padding : 20px 0 ;
