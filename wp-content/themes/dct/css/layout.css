@@ -105,9 +105,12 @@ dd{ margin-bottom: 1rem;}
 /* TEACHER DETAIL
 ===================================================================*/
 #table_professors tr{
-	padding : 20px 0 ;
 	border-bottom: gray 1px solid ;
 }
+#table_professors td {
+	padding : 20px 0 ;
+}
+
 /* RWD Setting
 ===================================================================*/
 .navbar-inverse .navbar-toggle{    background-color: #333;}
