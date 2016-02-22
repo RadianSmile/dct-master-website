@@ -51,10 +51,10 @@
 
 <div class="container">
 <div class="row">
-  <div class="col-sm-12">
-    <div class="divTitle">
+  <div class="col-sm-12 blockTitle xl">
+    <p class="divTitle">
       PROJECTS
-    </div>
+    </p>
     <hr class="none">
   </div>
   <!-- /title -->
