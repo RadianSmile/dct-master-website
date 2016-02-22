@@ -101,6 +101,13 @@ dd{ margin-bottom: 1rem;}
 #projectDe .mainView{ height: 350px;}
 #projectDe .mainView h1{ padding: 0px 20%;}
 #projectDe .listuser{ min-height: 170px; position: relative;top: -40px;}
+
+/* TEACHER DETAIL
+===================================================================*/
+#table_professors tr{
+	padding : 20px 0 ;
+	border-bottom: gray 1px solid ;
+}
 /* RWD Setting
 ===================================================================*/
 .navbar-inverse .navbar-toggle{    background-color: #333;}
