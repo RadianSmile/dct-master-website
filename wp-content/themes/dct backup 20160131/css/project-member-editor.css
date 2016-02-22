@@ -1,0 +1,92 @@
+@charset "UTF-8";
+
+/* editor style */
+
+div.editor-member-list {
+	width: 200px;
+	border: 2px solid #CCC;
+	background-color: #FFF;
+	
+	position: absolute;
+	display: none;
+	z-index: 2000;
+	
+	padding-bottom: 5px;
+	margin: 0px;
+}
+
+div.editor-member-thumbnail {
+	position: relative;
+	
+	width: 100%;
+	line-height: 40px;
+	
+	margin: 5px 0px;
+	border: none;
+	
+	cursor: pointer;
+}
+
+div.editor-member-thumbnail img {
+	width: 40px;
+	height: 40px;
+	
+	margin: 0px;
+	padding: 0px;
+			
+	vertical-align: middle;
+}
+
+div.editor-member-thumbnail span.display-name {
+	width: 150px;
+	text-align: center;
+	vertical-align: middle;
+	
+	margin: 0px 10px;
+}
+
+div.selected-member-thumbnail {
+	position: relative;
+	display: inline-block;
+	
+	width: 150px;
+	line-height: 40px;
+	
+	margin: 5px;
+	padding: 5px;
+	border: 2px solid #CCC;
+	
+	border-radius: 5px;
+	background-color: #FFF;
+}
+
+div.selected-member-thumbnail:hover {
+	background-color: #09C;
+	cursor: pointer;
+}
+
+div.selected-member-thumbnail img {
+	width: 40px;
+	height: 40px;
+	
+	margin: 0px;
+	padding: 0px;
+			
+	vertical-align: middle;
+}
+
+div.selected-member-thumbnail span.display-name {
+	width: 70px;
+	text-align: center;
+	vertical-align: middle;
+	display: inline-block;
+	
+	margin: 0px 10px;
+}
+
+div.selected-member-thumbnail span.close-mark {
+	color: #FFF;
+	width: 10px;
+	font-size: 10px;
+	vertical-align: middle;
+}

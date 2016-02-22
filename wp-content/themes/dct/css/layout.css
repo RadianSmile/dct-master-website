@@ -1,0 +1,125 @@
+@import url(http://fonts.googleapis.com/css?family=Abel);
+body{ color:#999; font-size: 1.6rem; }
+h1,h2,h3,h4,h5,h6{ color:#3D3D3D;}
+a{ color:inherit;}
+a:hover{ opacity: 0.8; text-decoration: none; }
+hr.none{ visibility: hidden;}
+hr.xl{ margin: 2rem}
+b.yellow{ color:#FFC000}
+.grey{ color: grey;}
+.properties{ font-size: 3rem;font-family: 'Abel';}
+.block-left{ display: inline-block; float: left;}
+.block-right{ display: inline-block; float: right;}
+.blockTitle{ font-family: "Microsoft YaHei"; font-size: 4rem;}
+.blockTitle.xl > p{ font-size: 4rem;}
+div.divTitle, .blockTitle > p { font-size: 2rem; padding:5px 0 0 10px; background-image: url(../img/arrowYellow_areaTitle.png); background-repeat: no-repeat; font-family: 'Abel', sans-serif; background-position: left top; font-family: }
+div.divTitle{ font-size: 3rem; color:#3D3D3D;}
+div.divTitle > span{font-size: 1.4rem; color:#999;}
+.blockTitle .more { font-size: 1.5rem; color:#ffc000;}
+ul.yellow, ul.green, ul.red, ul.none{ list-style-position: outside; list-style: none; margin-left: 20px; padding-left: 0px;}
+ul a{ color:inherit;}
+ul a:hover{ color:black ;}
+ul.yellow li::before{  content: "．"; color:#FFC000; font-weight: bold; margin-left: -20px;}
+ul.green li::before{ content: "．"; color:#8CC63F; font-weight: bold;  margin-left: -20px;}
+ul.red li::before{ content: "．"; color:#F15A24; font-weight: bold;  margin-left: -20px;}
+ul.none{ margin: 0px;}
+dt{ color:black;}
+dd{ margin-bottom: 1rem;}
+.label{ margin-bottom: 0.2rem; display: inline-block;}
+.courses_item{overflow: hidden; margin-bottom: 7rem; min-height: 200px; background-size: cover; background-repeat: no-repeat; position: relative;}
+.courses_item .info{ box-shadow: 10px 10px 20px rgba(0,0,0,0.2);position: absolute; left:0px; top:0px; background-color:white; }
+.courses_item .info a{ color:#999; display: inline-block; padding:0px 14px 15px 0;}
+.courses_item .info div:last-child{width: 0;height: 0;border-style: solid; border-width: 50px 80px 0 0; border-color:white transparent  transparent transparent ;  position: absolute; right:-80px; bottom: 0px;}
+.courses_item.black{margin-bottom: 3rem; }
+.courses_item.black .info{background-color: black; opacity: 0.8;}
+.courses_item.black .info a{  padding:14px 0 15px 15px; color:white;}
+.courses_item.black .info div:last-child{border-color:black transparent  transparent transparent ; border-width: 51px 80px 0 0; }
+.bottom.GF { position: absolute; bottom: 0px; left:0px; width: 100%;}
+.bottom.GF > div{   float: left;}
+.bottom.GF > div:nth-child(1){width: 60%; height: 50px; background: white;}
+.bottom.GF > div:nth-child(2){width: 0;height: 0;border-style: solid;border-width: 50px 0 0 80px;border-color: transparent transparent transparent white;}
+.top.GF { position: absolute; top: 0px; right:0px; width: 100%;}
+.top.GF > div{   float: right;}
+.top.GF > div:nth-child(1){width: 77%; height: 50px; background: white;}
+.top.GF > div:nth-child(2){width: 0;height: 0;border-style: solid; border-width: 0 80px 50px 0;border-color: transparent white transparent transparent ;}
+.listuser{min-height: 380px; display: inline-block; margin: 0px auto;}
+.listuser img{ width:80%; margin-bottom: 2rem; }
+.carousel-control{ width: 2rem;}
+.carousel-control.left, .carousel-control.right{ background: none; color:grey; text-shadow:none; opacity: 0.2;}
+.carousel-control.left:hover , .carousel-control.right:hover{ opacity: 0.7;}
+/* Navi
+===================================================================*/
+.container-fluid{ padding-right:0px;}
+.navbar-right a{   font-size: 14px; background-color: #242424; color: white;}
+.navbar-default .navbar-nav > li > a{ color:white;}
+.navbar-default .navbar-nav > li > a:hover{ color:inherit;}
+.navbar-nav { padding-right:15px; }
+.navbar-right{background-color: #242424; }
+.navbar-right a:hover{ background-color: #242424; color: white;}
+.navbar-right li.active{}
+.navbar-right .index.active a,
+.navbar-right .about.active a{background-color: #0A65B1;}
+.navbar-right .students.active a,
+.navbar-right .projects.active a{background-color: #AF0B69;}
+.navbar-right .faculty.active a,
+.navbar-right .courses.active a{ background-color: #0A65B1;}
+.navbar .GF{ float: right; background: transparent; width: 0;height: 0;border-style: solid;border-width: 0 80px 50px 0;border-color: transparent #242424 transparent transparent;}
+/* Footer
+===================================================================*/
+.footer{ padding-top: 20px ;font-size: 1.4rem; color:white; background-image: url('../img/bg_map_footer.jpg'); background-position: left top; background-repeat: repeat;}
+.footer .bottom{ background-color: black; padding: 10px; margin-top: 20px; color:#999; vertical-align: middle;}
+/* mainView
+===================================================================*/
+.mainView{ position: relative; color:white; background-image: url(../img/bt_theme_nav_01.png); background-repeat: repeat-y; background-size:cover; height: 400px;}
+.mainView h1, .mainView h2{  color:white;}
+.slogen{ text-align: center;  height: 300px; }
+#index .mainView.slogen{ position: relative; color:white; background-image: url(../img/bt_theme_nav_01.png); background-repeat: repeat-y; background-size:cover; height: 300px; background-position-y: 0px;}
+.mainView .pos{ padding-top: 130px; text-shadow: 0px 0px 10px rgba(0,0,0,0.8);}
+#index .mainView{background-image: url(../img/dct-people1.jpg);  background-position: 0px -220px;}
+#students .mainView {background-position-y: 472px;}
+/* FACULTY
+===================================================================*/
+.facultyleader img{vertical-align: middle; position: absolute; bottom: 20px; right: 50px;}
+.faculty_item{ border-bottom: 1px solid #eee; margin-top: 20px; padding-bottom: 20px;}
+.faculty_item h4{ font-size: 3.2rem; margin-top: 0px;}
+.facultyImg{ min-height: 3rem; background-size: cover; display: block; width: :100%; margin-bottom: 2rem;}
+/* STUDENT
+===================================================================*/
+#student .mainView.top p{width: 50%;margin: 0px auto;}
+#student .mainView{ font-family: "Microsoft YaHei"; font-size: 4rem; text-align: center;}
+#student h1{ margin:5px 0 0;}
+.ST-userTitle{ margin-top: -37px;}
+#student .img-circle{ margin-top: -60px;}
+.namePos{ position: relative; min-height: 5rem;}
+.namePos .posLeft{ position: absolute; left: 15px;}
+.namePos .posRight{ position: absolute; right: 15px;}
+/* PROJECT DETAIL
+===================================================================*/
+#projectDe .coverMask{background-color: rgba(0,0,0,0.65);position: absolute;width: 100%;height: 100%;}
+#projectDe .mainView{ height: 350px;}
+#projectDe .mainView h1{ padding: 0px 20%;}
+#projectDe .listuser{ min-height: 170px; position: relative;top: -40px;}
+/* RWD Setting
+===================================================================*/
+.navbar-inverse .navbar-toggle{    background-color: #333;}
+@media (max-width: 768px) {
+	.mainView.top p{ width: 100%; font-size: 2rem;}
+	#student .mainView.top p{width: 100%; margin-top: 10%;}
+	#student .mainView{ font-size: 3rem; }
+	.ST-userTitle{}
+	#projectDe .mainView h1{ font-size: 3rem; }
+	#projectDe .pos{padding-top: 20%;}
+	#index .mainView {background-image: url(../img/dct-people1.jpg);background-repeat: repeat;background-position: 0;background-size: cover;}
+	.facultyleader { text-align: center;}
+	.facultyleader .blockTitle{ text-align: left;}
+	.facultyleader img{ position: relative;     bottom: initial; right: initial;     border-bottom: 1px solid#bbb;
+    margin-bottom: 2rem;}
+    .navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form{ border:none;}
+    .navbar-nav {margin: 0px -15px;}
+    .navbar-header{background-color: rgba(0,0,0,0.8);
+    padding-bottom: 8px;}
+
+}
+@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) { ... }
+@media (min-width: @screen-md-min) and (max-width: @screen-md-max) { ... }
+@media (min-width: @screen-lg-min) { ... }
