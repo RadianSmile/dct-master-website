@@ -31,6 +31,12 @@
 
 	);
 
+  $award_news_args = array (
+    'posts_per_page' => 5,
+    'category_name' => '得獎新聞',
+    'post_type' => 'post'
+  );
+
 	$projects_args = array(
 		'posts_per_page' => 4,
 		'category' => '3,10',
@@ -39,6 +45,7 @@
 
 	$news_posts = get_posts( $news_args );
 	$project_posts = get_posts( $projects_args );
+  $award_news_posts = get_posts( $award_news_args) ;
 
 ?>
 <!-- /mainView -->
@@ -58,7 +65,7 @@
 					echo '</a>';
 				endforeach;
 				?>
-					
+
 				</ul>
 			</div>
 			<div class="col-md-4">
@@ -70,11 +77,11 @@
 						<p>INTERIOR <a href="news.html" class="more">更多 學生事務公告</a></p>
 						</h3>
 						<ul class="yellow">
-							
+
 							<li><a href="news_detail.html"> hic ut et non enim </a></li>
-							
+
 							<li><a href="news_detail.html"> deleniti id aperiam repellendus quia </a></li>
-							
+
 						</ul>
 						*/
 						?>
@@ -82,19 +89,19 @@
 					</div>
 					<div class="col-sm-12">
 						<h3 class="blockTitle xl">
-                        <?php // function not done yet
-						/*
+
+
 						<p>ADMISSION <a href="news.html" class="more">更多 招生資訊</a></p>
 						</h3>
 						<ul class="yellow">
-							
-							<li><a href="news_detail.html"> expedita quibusdam quos et tempore sequi sint repudiandae </a></li>
-							
-							<li><a href="news_detail.html"> corporis mollitia ut veritatis voluptatem et </a></li>
-							
+              <?php
+                foreach( $award_news_args as $index => $data ):
+                  echo '<li><a href="'.get_permalink( $data->ID ).'">';
+                  echo $data->post_title;
+                  echo '</a>';
+                endforeach;
+              ?>
 						</ul>
-						*/
-						?>
 					</div>
 				</div>
 			</div>
@@ -119,7 +126,7 @@
 	</div>
 	<hr class="none">
 	<!-- /slogen -->
-	
+
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-12">
@@ -131,7 +138,7 @@
 
 <?php
 	foreach( $project_posts as $index => $data ):
-		
+
 		$thumbnail_id = get_post_meta( $data->ID, '_thumbnail_id', true );
 		$imageUrl = wp_get_attachment_url( $thumbnail_id );
 ?>
@@ -146,10 +153,10 @@
 <?php
 	endforeach;
 ?>
-					
+
 				</div>
 			</div>
-			
+
 		</div>
 	</div>
 	<hr>
