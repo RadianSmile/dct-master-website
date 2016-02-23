@@ -175,6 +175,10 @@
 	);
 
 	$students = get_users( $studnet_args );
+
+  function cmp($a, $b){return strcmp($a->ID, $b->ID);}
+  usort($students, "cmp");
+
   $students_length = count($students);
 ?>
 
