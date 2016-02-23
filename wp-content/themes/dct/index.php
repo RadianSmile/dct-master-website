@@ -175,18 +175,7 @@
 	);
 
 	$students = get_users( $studnet_args );
-
-	// put users in display array, in order to set the term_num
-	foreach( $students as $index => $data ):
-		$term_num = get_user_meta( $data->ID, 'term_num', true );
-
-		if( empty( $display_array[ $term_num ] ) )
-			$display_array[ $term_num ] = array();
-		array_push( $display_array[ $term_num ], $data );
-	endforeach;
-
-	// sort array DESC, make newer student appear first
-	krsort($display_array);
+  $students_length = count($students);
 ?>
 
   <div class="container">
@@ -196,31 +185,80 @@
         <div class="divTitle">
           <?=$term?>th <span></span>
         </div>
-<?php foreach( $display_array as $term => $user_array ): ?>
-<?php foreach( $user_array as $index => $data ):
 
 
-    $attachment_id = get_user_meta( $data->ID, 'person_photo', true );
-    $photo = wp_get_attachment_image_src( $attachment_id, 'thumbnail', true );
-    $photoUrl = esc_attr( $photo[0] );
-
-    if( $attachment_id == null )
-    	$photoUrl = get_template_directory_uri() . '/img/WhosWho.png';
-
-?>
-      <div class="col-md-3 listuser text-center">
-      	<a href="<?= site_url().'/author/'.$data->user_login ?>">
-      		<img src="<?= $photoUrl ?>" alt="<?= $data->display_name ?>" class="img-circle" />
-      		<h4> <?= $data->display_name ?> </h4>
-      		<p> <?= get_user_meta( $data->ID, 'person_title', true ) ?> </p>
-      	</a>
-      </div>
-<?php endforeach; ?>
 
 
       </div>
     </div>
   </div>
+
+  <div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<hr class="none">
+				<h3 class="blockTitle xl">
+				<p>STUDENTS <a href="news.html" class="more"> 系所學生 >> </a></p>
+				</h3>
+				<hr class="none">
+
+				<div id="carousel-example-generic" class="carousel slide" data-ride="carousel" style="min-height:400px;">
+					<ol class="carousel-indicators">
+						<li data-target="#carousel-example-generic" data-slide-to="0" class=""></li>
+						<li data-target="#carousel-example-generic" data-slide-to="1" class=""></li>
+						<li data-target="#carousel-example-generic" data-slide-to="2" class="active"></li>
+					</ol>
+					<div class="carousel-inner" role="listbox">
+
+
+<?php foreach( $students as $index => $data ):
+  $attachment_id = get_user_meta( $data->ID, 'person_photo', true );
+  $photo = wp_get_attachment_image_src( $attachment_id, 'thumbnail', true );
+  $photoUrl = esc_attr( $photo[0] );
+  if( $attachment_id == null )
+  	$photoUrl = get_template_directory_uri() . '/img/WhosWho.png';
+?>
+
+<?php
+  if ($index % 4 == 0){
+    $activeClass = ($index ==0) ? "active" : "" ;
+    echo '<div class="item '. $activeClass  .'">\
+            <div class="row">';
+  }
+?>
+
+
+                <div class="col-md-3 listuser text-center">
+                	<a href="<?= site_url().'/author/'.$data->user_login ?>">
+                		<img src="<?= $photoUrl ?>" alt="<?= $data->display_name ?>" class="img-circle" />
+                		<h4> <?= $data->display_name ?> </h4>
+                		<p> <?= get_user_meta( $data->ID, 'person_title', true ) ?> </p>
+                	</a>
+                </div>
+
+<?php
+  if ($index % 4 == 3 || $index == $students_length-1){
+        echo '</div>\
+            </div>';
+  }
+?>
+
+<?php endforeach; ?>
+
+					</div>
+					<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+						<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+						<span class="sr-only">Previous</span>
+					</a>
+					<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+						<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+						<span class="sr-only">Next</span>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	 /students -->
 
 </div>
 <script>
