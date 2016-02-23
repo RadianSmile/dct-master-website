@@ -176,33 +176,24 @@
 
 	$students = get_users( $studnet_args );
 
-  function cmp($a, $b){return strcmp($a->ID, $b->ID);}
+
+
+  function cmp($a, $b){
+    $aid = get_user_meta( $a->ID,'student_id', true ) ;
+    $bid = get_user_meta( $b->ID,'student_id',true) ;
+    return $aid < $bid ;
+  }
   usort($students, "cmp");
 
   $students_length = count($students);
 ?>
 
   <div class="container">
-    <div class="row">
-      <div class="col-sm-12 ">
-
-        <div class="divTitle">
-          <?=$term?>th <span></span>
-        </div>
-
-
-
-
-      </div>
-    </div>
-  </div>
-
-  <div class="container">
 		<div class="row">
 			<div class="col-md-12">
 				<hr class="none">
 				<h3 class="blockTitle xl">
-				<p>STUDENTS <a href="news.html" class="more"> 系所學生 >> </a></p>
+				<p>STUDENTS <a href="students/" class="more"> 系所學生 >> </a></p>
 				</h3>
 				<hr class="none">
 
