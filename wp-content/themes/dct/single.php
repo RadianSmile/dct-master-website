@@ -14,7 +14,7 @@ function AddFeatureImageOnHead() {
 	$featureImageUrl = wp_get_attachment_url( $thumbnail_id );
 
 	add_action('wp_head', 'AddFeatureImageOnHead');
-	
+
 	$cat = get_the_category( $thePost->ID );
 	$isProject = false;
 	// 專案：3
@@ -33,8 +33,8 @@ function AddFeatureImageOnHead() {
 
     // 預設抓取現在頁面的 post
     $thePost = get_post();
-    
-	
+
+
     $thumbnail_id = get_post_meta( $thePost->ID, '_thumbnail_id', true );
     $imageUrl = wp_get_attachment_url( $thumbnail_id );
 
@@ -63,14 +63,14 @@ function AddFeatureImageOnHead() {
   <!-- Team member -->
   <div class="row">
     <div class="col-md-8 col-md-offset-2 text-center" title="團隊成員">
-<?php	
+<?php
 		$members_id = get_post_meta( $thePost->ID, 'project_member' );
-		
+
 		foreach( $members_id as $index => $member_id ) :
 			$targetUser = get_user_by( 'id', $member_id );
 			$photoId = get_user_meta( $member_id, 'person_photo', true );
 			$photo = wp_get_attachment_image_src( $photoId, 'thumbnail' );
-			
+
 			$photoUrl = $photo[0];
 			$person_link = site_url().'/author/'.$targetUser->user_login;
 ?>
@@ -83,8 +83,8 @@ function AddFeatureImageOnHead() {
 <?php
 		endforeach;
 ?>
-      
-      
+
+
     </div>
   </div>
   <!-- /Team member  =================================================  -->
@@ -123,7 +123,7 @@ function AddFeatureImageOnHead() {
           <li>資訊設計</li>
         </ul>
       </div>
-      
+
     </div>
   </div>
   </div>
@@ -162,5 +162,5 @@ $('li.projects').attr('class', 'active projects');
         $('#pageMainView').css('background','url(<?=$imageUrl?>)');
     </script>
 <?php endif ?>
-<?php get_footer() ?>
 <?php endif ?>
+<?php get_footer() ?>
