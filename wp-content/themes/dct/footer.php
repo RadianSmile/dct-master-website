@@ -18,7 +18,7 @@
                             </div>
                         </div>
                         <div class="bottom text-center">
-                            <span>National Chengchi University © All RIGHTS RESERVED. <a href="wp-admin/">Login</a></span>
+                            <span>National Chengchi University © All RIGHTS RESERVED. <a href="/master/wp-login.php">Login</a></span>
 
                         </div>
                     </div>
