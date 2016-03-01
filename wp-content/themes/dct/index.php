@@ -253,8 +253,6 @@
 			</div>
 		</div>
 	</div>
-	 /students -->
-
 </div>
 <script>
 	$('body').attr('id', 'index');
