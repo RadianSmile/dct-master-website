@@ -1,5 +1,5 @@
 <?php
-/** 
+/**
  * WordPress 基本設定檔。
  *
  * 本檔案包含以下設定選項： MySQL 設定、資料表前綴、
@@ -64,7 +64,7 @@ $table_prefix  = 'dct_';
 /**
  * WordPress 本地化語言設定。預設為正體中文。
  *
- * 舉例來說，要使用 WordPress 正體中文介面，只需要填入 'zh_TW'。 
+ * 舉例來說，要使用 WordPress 正體中文介面，只需要填入 'zh_TW'。
  * 更改此設定將 WordPress 本地化。對應的 MO 檔案必須放置於 wp-content/languages 目錄下。
  * 舉例來說，將 zh_TW.mo 放置於 wp-content/languages 內並將 WPLANG 設定為 'zh_TW' 將
  * 使用正體中文介面。
@@ -115,6 +115,8 @@ define ('WPLANG', 'zh_TW');
 define('WP_DEBUG', false);
 
 /* 設定完成，請儲存檔案。然後開始 Blogging 吧！ */
+
+define('WP_AUTO_UPDATE_CORE',false);
 
 /** WordPress 目錄的絕對路徑。 */
 if ( !defined('ABSPATH') )
