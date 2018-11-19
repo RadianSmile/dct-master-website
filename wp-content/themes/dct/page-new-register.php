@@ -97,7 +97,7 @@
 			);
 
 			echo "註冊成功！ 你的資料已經出現在學生頁面上<br />
-			請前往 <a href='http://www.dct.nccu.edu.tw/master/wp-admin/profile.php'>個人資料編輯頁面</a> 進一步更新您的資料（不然大家都會看到你不完整的資料喔！）";
+			請前往 <a href='https://dct.nccu.edu.tw/master/wp-admin/profile.php'>個人資料編輯頁面</a> 進一步更新您的資料（不然大家都會看到你不完整的資料喔！）";
 
 		}
 		else

@@ -1,6 +1,6 @@
 <?php defined('ABSPATH') or die("No Hackers Sorry !") ?>
 <?php get_header() ?>
-<div class="mainView top" style="background-image:url(http://140.119.162.60/master/wp-content/uploads/2014/09/1909356_761312120547229_1676411160_o.jpg); background-position: center">
+<div class="mainView top" style="background-image:url(//dct.nccu.edu.tw/master/wp-content/uploads/2014/09/1909356_761312120547229_1676411160_o.jpg); background-position: center">
   <div class="container">
     <div class="row">
       <div class="col-md-12">
