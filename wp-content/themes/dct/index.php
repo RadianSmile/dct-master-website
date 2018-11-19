@@ -5,7 +5,7 @@
 		<div class="row">
 			<div class="col-md-12">
 				<div class="pos">
-					<h1>DIGITAL CONTENTS & <br> TECHNOLOGIES</h1>
+					<h1>DIGITAL CONTENT & <br> TECHNOLOGIES</h1>
 					<p>政治大學數位內容碩士學位學程</p>
 				</div>
 			</div>
