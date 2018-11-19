@@ -8,7 +8,7 @@
 
 ?>
 <?php
-	
+
 	if( count($_POST) == 7 )
 	{
 		$show_function = 'register_account';
@@ -18,7 +18,7 @@
 		if( check_register_code( $_GET['code'], $_GET['student_id'] ) )
 			$show_function = 'form_part_html';
 	}
-	
+
 	if( $show_function == NULL )
 		return_404();
 
@@ -29,42 +29,42 @@
 
 	// display the content
 	$show_function();
-	
-	
-	
-	
+
+
+
+
 	function register_account(){
-		
+
 		// do some server side check
-		
+
 		// check is code being modified
 		if( !check_register_code( $_POST['rcode'], $_POST['student_id'] ) )
 		{
 			echo "有錯誤發生，註冊失敗，請聯絡管理員！";
 			return ;
 		}
-		
+
 		if( username_exists( $_POST['user_name'] ) )
 		{
 			echo "帳號已經被使用，請換一個帳號重新註冊";
 			return ;
 		}
-		
+
 		$userData = array(
 			'user_login' => $_POST['user_name'],
 			'user_pass' => $_POST['pass1'],
 			'role' => 'student',
 			'user_email' => $_POST['email'],
 		);
-		
+
 		$user_id = wp_insert_user( $userData );
-		
+
 		// if create user succeed, would return user id, otherwise return object
 		if( gettype($user_id) == 'integer' ) {
 			update_usermeta( $user_id, 'student_id', $_POST['student_id'] );
-			
+
 			global $wpdb;
-			
+
 			$wpdb->update(
 				'custom_register_code',
 				array( 'available' => false ),
@@ -72,16 +72,16 @@
 				array( '%b' ),
 				array( '%s' )
 			);
-			
+
 			echo "註冊成功！ 你的資料已經出現在學生頁面上<br />
-			請前往 <a href='http://www.dct.nccu.edu.tw/master/wp-admin/profile.php'>個人資料編輯頁面</a> 進一步更新您的資料（不然大家都會看到你不完整的資料喔！）";
-			
+			請前往 <a href='/master/wp-admin/profile.php'>個人資料編輯頁面</a> 進一步更新您的資料（不然大家都會看到你不完整的資料喔！）";
+
 		}
 		else
 		{
 			echo "註冊失敗 Something went wrong :/";
 		}
-	
+
 	} // register account
 ?>
 <?php function form_part_html(){ ?>
@@ -137,8 +137,8 @@ div.wp-core-ui .description {
                 <span class="description">請輸您最常使用的校外信箱，避免您漏掉重要資訊</span>
             </td>
 		</tr>
-    	
-        
+
+
     </table>
         <input name="rcode" type="hidden" value="<?=$_GET['code']?>" />
         <input type="hidden" name="student_id" value="<?=$_GET['student_id']?>" />
@@ -152,10 +152,10 @@ div.wp-core-ui .description {
 <script type="text/javascript">
 
 var username_valid = false;
-	
+
 jQuery( document ).ready( function( $ ) {
-	
-	// form checking 
+
+	// form checking
 	function check_all_element()
 	{
 		if( $('input#username').val().trim() !== '' )
@@ -168,26 +168,26 @@ jQuery( document ).ready( function( $ ) {
 			$('#submit').removeAttr( 'disabled' );
 			return;
 		}
-		
+
 		$('#submit').attr('disabled', 'disabled');
 	}
-	
+
 	$('#register_form').keyup(function(e) {
 		check_all_element();
-	});	
-	
+	});
+
 	// check is username avilable
 	$('#username').change(function(e) {
 		var ajaxurl = '<?=admin_url( 'admin-ajax.php' )?>';
-			
+
 		var data = {
 			'action' : 'check_username',
 			'entered_username' : $(this).val()
 		};
-			
+
 		$.post( ajaxurl, data, function( response ){
 			// when ajax return a value
-			
+
 			if( response == 'OK' )
 			{
 				$('#username_valid_display').css('color', '#0C9');
@@ -200,12 +200,12 @@ jQuery( document ).ready( function( $ ) {
 				$('#username_valid_display').text('已被註冊，請換一個帳號');
 				username_valid = false;
 			}
-			
+
 			check_all_element();
 		});
-			
+
     });
-	
+
     // Binding to trigger checkPasswordStrength
     $( 'body' ).on( 'keyup', 'input[id=pass1], input[id=pass2]',
         function( event ) {
@@ -228,41 +228,41 @@ function checkPasswordStrength( $pass1,
                                 blacklistArray ) {
         var pass1 = $pass1.val();
     var pass2 = $pass2.val();
- 
+
     // Reset the form & meter
 	$submitButton.attr( 'disabled', 'disabled' );
     $strengthResult.removeClass( 'short bad good strong' );
- 
+
     // Extend our blacklist array with those from the inputs & site data
     blacklistArray = blacklistArray.concat( wp.passwordStrength.userInputBlacklist() )
- 
+
     // Get the password strength
     var strength = wp.passwordStrength.meter( pass1, blacklistArray, pass2 );
- 
+
     // Add the strength meter results
     switch ( strength ) {
- 
+
         case 2:
             $strengthResult.addClass( 'bad' ).html( pwsL10n.bad );
             break;
- 
+
         case 3:
             $strengthResult.addClass( 'good' ).html( pwsL10n.good );
             break;
- 
+
         case 4:
             $strengthResult.addClass( 'strong' ).html( pwsL10n.strong );
             break;
- 
+
         case 5:
             $strengthResult.addClass( 'short' ).html( pwsL10n.mismatch );
             break;
- 
+
         default:
             $strengthResult.addClass( 'short' ).html( pwsL10n.short );
- 
+
     }
-	
+
     return strength;
 }
 </script>
